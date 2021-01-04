@@ -1,11 +1,7 @@
-let prompt = require('prompt-sync')({sigint: true});
+let readlineSync = require('readline-sync');
 
-let Wikipedia = prompt("Wikipedia Mb:");
-let Memes = prompt ("Memes Mb:")
-
-Wikipedia = parseFloat(Wikipedia );
-Memes = parseFloat(Memes)
-
+let Wikipedia = readlineSync.question("Wikipedia Mb:");
+let Memes = readlineSync.question ("Memes Mb:")
 
 let total = (Wikipedia *0.10);
 let total1= (Memes * 0.05);
@@ -19,6 +15,7 @@ console.log(`${total}  ${total1} `);
 else if (total>=100){
     console.log("Too much consumption")
 }
+
 
 
 
